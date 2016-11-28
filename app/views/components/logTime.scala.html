@@ -1,5 +1,6 @@
-@(param: Any)(implicit messages: Messages)
+@()(implicit messages: Messages)
 <div class="form-horizontal">
+  <h3>Log Time</h3>
   <div class="form-group">
     <div class="col-sm-6">
       <label>Date</label>
@@ -31,10 +32,7 @@
       />
     </div>
   </div>
-  @*
-  <!-- <button class="btn btn-primary" @click="save()">Save</button> -->
-  *@
-  <button class="btn btn-primary">Save</button>
-  <button v-link="'/time-entries'" class="btn btn-danger">Cancel</button>
+  <button class="btn btn-primary" @@click="save()">Save</button>
+  <button v-on:click="route('home')" class="btn btn-danger">Cancel</button>
   <hr>
 </div>

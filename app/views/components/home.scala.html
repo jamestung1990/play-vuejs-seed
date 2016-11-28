@@ -1,9 +1,9 @@
-@(param: Any)(implicit messages: Messages)
+@()(implicit messages: Messages)
 <div class="jumbotron">
   <h1>@messages("home.title")</h1>
   <p>
     <strong>
-      Get started by <a v-link="'/time-entries'">creating a time entry</a>.
+      Get started by <a href="#" v-on:click="route('timeEntries')">creating a time entry</a>.
     </strong>
   </p>
 </div>

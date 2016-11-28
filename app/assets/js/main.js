@@ -16,8 +16,8 @@
 		paths : {
 			'requirejs' : [ '../lib/requirejs/require' ],
 			'jquery' : [ '../lib/jquery/jquery' ],
-			'vue' : [ '../lib/vue/vue' ],
 			'bootstrap' : [ '../lib/bootstrap/js/bootstrap' ],
+			'vue' : [ '../lib/vue/vue' ],
 			'jsRoutes' : [ '/jsroutes' ],
 			//net utils for loading templates
 			'net' : ['./utils/net'],

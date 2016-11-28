@@ -7,7 +7,7 @@ import play.api.i18n.I18nSupport
 import play.api.i18n.MessagesApi
 import org.webjars.play.RequireJS
 
-class AppController @Inject() (webJarAssets: WebJarAssets, requireJS: RequireJS) extends Controller {
+class AppController @Inject() (val messagesApi: MessagesApi, webJarAssets: WebJarAssets, requireJS: RequireJS) extends Controller with I18nSupport {
   
   /**
    * pass webJarAssets and requireJS
@@ -16,8 +16,4 @@ class AppController @Inject() (webJarAssets: WebJarAssets, requireJS: RequireJS)
     Ok(views.html.index(webJarAssets, requireJS))
   }
   
-  def timeEntries = Action {
-    //TODO
-    Ok
-  }
 }

@@ -1,20 +1,17 @@
-@(param: Any)(implicit messages: Messages)
+@import views.html.components._
+@()(implicit messages: Messages)
+
 <div id="wrapper">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="glyphicon glyphicon-time"></i>
-        Vue Time Tracker
-      </a>
-      <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Time Entries</a></li>
-      </ul>
-    </div>
-  </nav>
   <div class="container">
+    <navbar></navbar>
     <div class="col-sm-3">
       <sidebar v-bind:time="totalTime"></sidebar>
     </div>
+    <!-- primary app control area -->
+    <div class="col-sm-9">
+      <transition name="fade" mode="out-in">
+        <component v-bind:is="navKey"></component>
+      </transition>
+    </div>
+
   </div>
-</div>

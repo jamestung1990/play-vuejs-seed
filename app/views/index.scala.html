@@ -1,4 +1,4 @@
-@(webJarAssets: WebJarAssets, requireJS: org.webjars.play.RequireJS)
+@(webJarAssets: WebJarAssets, requireJS: org.webjars.play.RequireJS)(implicit messages: Messages)
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 <body>
   <!-- Vue root component -->
   <div id="root">
-  	<app></app>
+    <app></app>
   </div>
 </body>
 </html>

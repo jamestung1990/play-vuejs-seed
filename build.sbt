@@ -5,16 +5,18 @@ version := "1.0-SNAPSHOT"
 scalaVersion := "2.11.8"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala, SbtWeb)
+///enable for babel es2015 transpilation
+//JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
 
 routesGenerator := InjectedRoutesGenerator
 
 libraryDependencies ++= Seq(
   filters,
   cache,
-  "org.webjars" 		%% "webjars-play" 	 		% "2.5.0-4",
-  "org.webjars" 		% "requirejs" 				  % "2.3.2",
+  "org.webjars" 		%% "webjars-play" 	 			% "2.5.0-4",
+  "org.webjars" 		% "requirejs" 				  	% "2.3.2",
   "org.webjars" 		% "jquery" 				    	% "1.12.4",
-  "org.webjars" 		% "bootstrap" 			 	  % "3.3.7-1",
+  "org.webjars" 		% "bootstrap" 			 	  	% "3.3.7-1",
   "org.webjars" 		% "vue" 				   	    % "2.0.0"
 )
 

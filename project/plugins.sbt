@@ -5,7 +5,7 @@ resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/maven-
 // Use the Play sbt plugin for Play projects
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.10")
 
-//FIXME: Babel transpiler
+//Babel transpiler
 //addSbtPlugin("io.teamscala.sbt" % "sbt-babel" % "1.0.5")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.0")
